@@ -63,7 +63,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await axios.post('http://localhost:4000/users/register', {
+        const response = await axios.post('https://mte-server.onrender.com/register', {
             email: email.value,
             password: password.value,
             isAdmin: false

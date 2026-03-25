@@ -98,7 +98,7 @@ const searchTerm = ref('');
 async function getAllPosts() {
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.get('http://localhost:4000/posts', {
+    const response = await axios.get('https://mte-server.onrender.com/posts', {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -120,7 +120,7 @@ async function createPost() {
   try {
     const token = localStorage.getItem('token');
     const response = await axios.post(
-      'http://localhost:4000/posts/create',
+      'https://mte-server.onrender.com/create',
       newPost.value,
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -142,7 +142,7 @@ async function createPost() {
 async function deletePost(postId) {
   try {
     const token = localStorage.getItem('token');
-    await axios.delete(`http://localhost:4000/posts/${postId}`, {
+    await axios.delete(`https://mte-server.onrender.com/posts/${postId}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
 

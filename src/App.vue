@@ -14,7 +14,7 @@ onMounted(async () => {
 
   try {
     // Validate token and fetch user details
-    const response = await axios.get('http://localhost:4000/users/details', {
+    const response = await axios.get('https://mte-server.onrender.com/users/details', {
       headers: { Authorization: `Bearer ${token}` }
     });
 
