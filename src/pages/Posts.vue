@@ -120,7 +120,7 @@ async function createPost() {
   try {
     const token = localStorage.getItem('token');
     const response = await axios.post(
-      'https://mte-server.onrender.com/create',
+      'https://mte-server.onrender.com/posts/create',
       newPost.value,
       { headers: { Authorization: `Bearer ${token}` } }
     );
