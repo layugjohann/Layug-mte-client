@@ -62,7 +62,7 @@ async function authenticate() {
   }
 
   try {
-    const response = await axios.post('http://localhost:4000/users/login', {
+    const response = await axios.post('https://mte-server.onrender.com/users/login', {
       email: email.value,
       password: password.value
     });
@@ -93,7 +93,7 @@ async function authenticate() {
 
 async function retrieveUserDetails(token) {
   try {
-    const response = await axios.get('http://localhost:4000/users/details', {
+    const response = await axios.get('https://mte-server.onrender.com/users/details', {
       headers: { Authorization: `Bearer ${token}` }
     });
 
